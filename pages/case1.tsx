@@ -26,7 +26,7 @@ export default function Index() {
         </Button>
         <Modal setOpen={setOpen} setUserName={setUsername} open={open} />
         {username && (
-          <div>
+          <div className="username">
             <h2>Welcome {username}</h2>
           </div>
         )}
