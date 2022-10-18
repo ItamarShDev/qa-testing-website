@@ -10,10 +10,12 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   if (!req.query.name || !req.query.lastName) {
+    // @ts-ignore
     res.status(200).json({ username: "" });
     return;
   }
   const id = Math.random().toString(36).substring(7);
   const userName = `${req.query.name}-${req.query.lastName}-${id}`;
+  // @ts-ignore
   res.status(200).json({ username: userName });
 }
